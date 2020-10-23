@@ -20,7 +20,7 @@ class Transfer
       sender.balance -= amount
       receiver.balance += amount
       self.status = "complete"
-      self.amount = 50
+      self.amount = 0
     end
   end
 
