@@ -13,12 +13,15 @@ class Transfer
   end
 
   def execute_transaction
-    sender.balance -= amount
-    receiver.balance += amount
-    self.status = "complete"
-    self.amount = 0
-    self.status = "rejected"
-    "Transaction rejected. Please check your account balance."
+    if self.amount == 0
+      self.status = "rejected"
+      "Transaction rejected. Please check your account balance."
+    else
+      sender.balance -= amount
+      receiver.balance += amount
+      self.status = "complete"
+      self.amount = 0
+    end
   end
 
 end
