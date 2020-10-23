@@ -21,6 +21,7 @@ class Transfer
       receiver.balance += amount
       self.status = "complete"
       #self.amount = 50
+      "Transaction re"
     end
   end
 
