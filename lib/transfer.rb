@@ -20,7 +20,7 @@ class Transfer
       sender.balance -= amount
       receiver.balance += amount
       self.status = "complete"
-      #@amount = 0
+      amount = 0
     end
   end
 
